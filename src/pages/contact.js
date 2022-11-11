@@ -7,7 +7,7 @@ const contact = () => {
   return (
     <Layout2>
       <Head>
-        <title>Contact - Bieber - React Personal Portfolio Template</title>
+        <title>Contact - Adnan Niaz - Personal Portfolio</title>
       </Head>
 
       {/* Start Contact Section */}
