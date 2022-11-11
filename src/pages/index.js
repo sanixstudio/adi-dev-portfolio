@@ -27,7 +27,7 @@ const index = ({ pages }) => {
             <div className="container mx-auto">
               <div className="herosection-content py-20 text-center">
                 <h1 className="text-primary">
-                  Bieber - React Personal Portfolio Template
+                  Adnan Niaz - Personal Portfolio
                 </h1>
                 <p className="lead">
                   Bieber is a creative personal portfolio React template build
@@ -105,7 +105,7 @@ const index = ({ pages }) => {
             &copy; {new Date().getFullYear()}, All right reserved
             <Link href="/">
               <a className="pl-1.5 font-medium text-heading no-underline hover:text-primary">
-                NuclearThemes
+                SanixStudio
               </a>
             </Link>
           </p>

@@ -89,7 +89,7 @@ const MobileFullmenu = ({ fullMenuHandler }) => {
           </span>
           <Link href="/">
             <a className="font-medium text-heading no-underline hover:text-primary">
-              NuclearThemes
+              SanixStudio
             </a>
           </Link>
         </p>
