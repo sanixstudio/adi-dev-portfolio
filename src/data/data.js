@@ -11,3 +11,7 @@ export const USER_INFO = {
   address: "San Francisco, Bay Area",
   freelance: "No"
 }
+
+export const IMAGE_INFO = {
+  thumbImage: "/icon-384x384.png"
+}

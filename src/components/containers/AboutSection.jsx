@@ -11,6 +11,8 @@ const AboutSection = () => {
 
   // if (!data) return null;
 
+  console.log(USER_INFO);
+
   return (
     <div className="grid grid-cols-2 items-center gap-7">
       <div className="col-span-2 lg:col-span-1">
