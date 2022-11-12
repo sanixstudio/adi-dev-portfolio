@@ -8,11 +8,12 @@ import { childrenAnimation } from "../../lib/motion";
 import { useQuery } from "react-query";
 import { getInformation } from "../../fetchers";
 import ReactTyped from "react-typed";
+import { USER_INFO } from "../../data/info";
 
 const HeroSection = ({ blurred, scroll = true, typed = true }) => {
-  const { data } = useQuery("information", getInformation);
+  // const { data } = useQuery("information", getInformation);
 
-  if (!data) return null;
+  // if (!data) return null;
 
   return (
     <div className="herosection relative overflow-hidden">
@@ -40,8 +41,8 @@ const HeroSection = ({ blurred, scroll = true, typed = true }) => {
                   <Image
                     loader={imageLoader}
                     unoptimized={true}
-                    src={data.thumbImage}
-                    alt={data.fullName}
+                    src={USER_INFO.thumbImage}
+                    alt={USER_INFO.fullName}
                     height={150}
                     width={150}
                     layout="responsive"
@@ -68,14 +69,14 @@ const HeroSection = ({ blurred, scroll = true, typed = true }) => {
                     backSpeed={20}
                     backDelay={2000}
                     strings={[
-                      data.fullName,
+                      USER_INFO.fullName,
                       "Full-stack Developer",
                       "Web Designer",
                     ]}
                     className="text-primary"
                   />
                 ) : (
-                  <span className="text-primary">{data.fullName}</span>
+                  <span className="text-primary">{USER_INFO.fullName}</span>
                 )}
               </motion.h1>
               <motion.p
@@ -86,7 +87,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }) => {
                 variants={childrenAnimation}
                 className="lead mb-0"
               >
-                {data.bio}
+                {USER_INFO.bio}
               </motion.p>
               <motion.div
                 initial="hidden"
@@ -96,7 +97,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }) => {
                 variants={childrenAnimation}
                 className="herosection-socialicons mt-7 text-center"
               >
-                <SocialIcons data={data.socialAddress} />
+                <SocialIcons data={USER_INFO.socialAddress} />
               </motion.div>
             </div>
           </div>
