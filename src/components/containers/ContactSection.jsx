@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { RiMailLine, RiMapPinLine, RiPhoneLine } from "react-icons/ri";
 import { useQuery } from "react-query";
-import { USER_INFO } from "../../data/data";
+import { USER_INFO } from "../../data/info";
 import { getInformation } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import ContactForm from "./ContactForm";

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import { useQuery } from "react-query";
-import { IMAGE_INFO } from "../../data/data";
+import { USER_INFO } from "../../data/info";
 import { getInformation } from "../../fetchers";
 import { imageLoader } from "../../lib/utils";
 
@@ -19,8 +19,8 @@ const Sidemenu = ({ fullMenu, fullMenuHandler }) => {
             <Image
               loader={imageLoader}
               unoptimized={true}
-              src={IMAGE_INFO.thumbImage}
-              alt={IMAGE_INFO.fullName}
+              src={USER_INFO.thumbImage}
+              alt={USER_INFO.fullName}
               height={60}
               width={60}
               layout="responsive"

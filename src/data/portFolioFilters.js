@@ -1,0 +1,22 @@
+export const PORTFOLIO_FILTERS = [
+  {
+    id: 1,
+    title: "UI/UX Design",
+    value: "uiux"
+  },
+  {
+    id: 2,
+    title: "Html & Css",
+    value: "html"
+  },
+  {
+    id: 3,
+    title: "React Js",
+    value: "react"
+  },
+  {
+    id: 4,
+    title: "Node Js",
+    value: "node"
+  }
+]

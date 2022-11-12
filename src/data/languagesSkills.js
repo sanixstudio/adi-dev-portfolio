@@ -1,0 +1,36 @@
+export const LANGUAGES_SKILLS = [{
+  id: 1,
+  title: "Javascript",
+  percentage: 85
+},
+{
+  id: 2,
+  title: "TypScript",
+  percentage: 70
+},
+{
+  id: 3,
+  title: "Node Js",
+  percentage: 75
+},
+{
+  id: 4,
+  title: "React Js",
+  percentage: 80
+},
+{
+  id: 5,
+  title: "Next Js",
+  percentage: 80
+},
+{
+  id: 6,
+  title: "Html & Css",
+  percentage: 98
+},
+{
+  id: 7,
+  title: "Figma",
+  percentage: 80
+}
+]

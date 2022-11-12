@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { childrenAnimation } from "../../lib/motion";
 import { getInformation } from "../../fetchers";
 import { useQuery } from "react-query";
-import { USER_INFO } from "../../data/data";
+import { USER_INFO } from "../../data/info";
 
 const AboutSection = () => {
   // const { data } = useQuery("information", getInformation);
