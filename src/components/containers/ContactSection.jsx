@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { RiMailLine, RiMapPinLine, RiPhoneLine } from "react-icons/ri";
 import { useQuery } from "react-query";
+import { USER_INFO } from "../../data/data";
 import { getInformation } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
-  const { data } = useQuery("information", getInformation);
+  // const { data } = useQuery("information", getInformation);
 
-  if (!data) return null;
+  // if (!data) return null;
 
   return (
     <div className="grid grid-cols-9 gap-7">
@@ -35,7 +36,7 @@ const ContactSection = () => {
               </span>
               <div className="content">
                 <h5 className="mb-2">Contact on phone</h5>
-                {data.phoneNumbers.map((number, index) => (
+                {USER_INFO.phoneNumbers.map((number, index) => (
                   <p className="mb-0" key={index}>
                     <Link href={`tel:${number.split("-").join("")}`}>
                       <a className="no-underline">{number}</a>
@@ -50,7 +51,7 @@ const ContactSection = () => {
               </span>
               <div className="content">
                 <h5 className="mb-2">Contact on mail</h5>
-                {data.emailAddress.map((email, index) => (
+                {USER_INFO.emailAddress.map((email, index) => (
                   <p className="mb-0" key={index}>
                     <Link href={`mailto:${email}`}>
                       <a className="no-underline">{email}</a>

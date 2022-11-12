@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 import { childrenAnimation } from "../../lib/motion";
 import { getInformation } from "../../fetchers";
 import { useQuery } from "react-query";
+import { USER_INFO } from "../../data/data";
 
 const AboutSection = () => {
-  const { data } = useQuery("information", getInformation);
+  // const { data } = useQuery("information", getInformation);
 
-  if (!data) return null;
+  // if (!data) return null;
 
   return (
     <div className="grid grid-cols-2 items-center gap-7">
@@ -29,11 +30,11 @@ const AboutSection = () => {
             <Image
               loader={imageLoader}
               unoptimized={true}
-              src={data.largeImage}
+              src={USER_INFO.largeImage}
               height={422}
               width={660}
               layout="responsive"
-              alt={data.fullName}
+              alt={USER_INFO.fullName}
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
                 shimmer(660, 422)
@@ -52,63 +53,63 @@ const AboutSection = () => {
           className="about-content"
         >
           <h3>
-            Hi, I am <span className="text-primary">{data.fullName}</span>
+            Hi, I am <span className="text-primary">{USER_INFO.fullName}</span>
           </h3>
           <ul className="styledlist">
-            {data.firstName && (
+            {USER_INFO.firstName && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   First Name{" "}
                 </strong>
-                : {data.firstName}
+                : {USER_INFO.firstName}
               </li>
             )}
-            {data.lastName && (
+            {USER_INFO.lastName && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Last Name{" "}
                 </strong>
-                : {data.lastName}
+                : {USER_INFO.lastName}
               </li>
             )}
-            {data.age && (
+            {USER_INFO.age && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Age{" "}
                 </strong>
-                : {data.age} years
+                : {USER_INFO.age} years
               </li>
             )}
-            {data.nationality && (
+            {USER_INFO.nationality && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Nationality{" "}
                 </strong>
-                : {data.nationality}
+                : {USER_INFO.nationality}
               </li>
             )}
-            {data.languages.length ? (
+            {USER_INFO.languages.length ? (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Languages{" "}
                 </strong>
-                : {data.languages.join(", ")}
+                : {USER_INFO.languages.join(", ")}
               </li>
             ) : null}
-            {data.address && (
+            {USER_INFO.address && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Address{" "}
                 </strong>
-                : {data.address}
+                : {USER_INFO.address}
               </li>
             )}
-            {data.freelance && (
+            {USER_INFO.freelance && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Freelance{" "}
                 </strong>
-                : {data.freelance}
+                : {USER_INFO.freelance}
               </li>
             )}
           </ul>
